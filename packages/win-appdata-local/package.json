@@ -1,6 +1,6 @@
 {
   "name": "win-appdata-local",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "get windows LOCALAPPDATA",
   "homepage": "https://github.com/bluelovers/ws-os/tree/master/packages/win-appdata-local#readme",
   "bugs": {
@@ -28,6 +28,5 @@
     "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
-  },
-  "devDependencies": {}
+  }
 }
