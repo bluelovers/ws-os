@@ -1,6 +1,6 @@
 {
   "name": "os-lang-locale",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "module to retrieve current user's os language",
   "keywords": [
     "lang",
