@@ -5,7 +5,7 @@
 import { platform, homedir, type, userInfo } from 'os';
 import { dirname, join } from 'path';
 
-export = function winAppdataLocal(): string
+export function winAppdataLocal(): string
 {
 	if (platform() !== 'win32')
 	{
@@ -14,3 +14,5 @@ export = function winAppdataLocal(): string
 
 	return process.env.LOCALAPPDATA ?? join(homedir(), 'AppData', 'Local')
 }
+
+export default winAppdataLocal

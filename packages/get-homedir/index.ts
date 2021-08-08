@@ -5,7 +5,7 @@
 import { join, dirname } from "path";
 import { homedir } from "os";
 
-export = function get_homedir(opts?: {
+export function get_homedir(opts?: {
 	username?: string,
 	homedir?: string,
 })
@@ -32,3 +32,5 @@ function isDefined<T>(value: T): value is NonNullable<T>
 {
 	return value !== null && value !== void 0
 }
+
+export default get_homedir

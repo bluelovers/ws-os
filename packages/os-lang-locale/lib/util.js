@@ -7,13 +7,13 @@ exports.lineSplitLike = exports.stripString = exports.bufString = exports.decode
 const iconv_jschardet_1 = require("iconv-jschardet");
 const crlf_normalize_1 = require("crlf-normalize");
 const path_1 = require("path");
-exports.PROJECT_ROOT = path_1.resolve(__dirname, '..');
+exports.PROJECT_ROOT = (0, path_1.resolve)(__dirname, '..');
 function decodeBuffer(buf) {
-    return iconv_jschardet_1.BufferFrom(buf, "utf8" /* UTF8 */);
+    return (0, iconv_jschardet_1.BufferFrom)(buf, "utf8" /* UTF8 */);
 }
 exports.decodeBuffer = decodeBuffer;
 function bufString(buf) {
-    return crlf_normalize_1.crlf(decodeBuffer(buf).toString());
+    return (0, crlf_normalize_1.crlf)(decodeBuffer(buf).toString());
 }
 exports.bufString = bufString;
 function stripString(input) {

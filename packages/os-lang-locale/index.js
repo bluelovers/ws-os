@@ -1,20 +1,18 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.localeCallback = exports.localeAsync = exports.locale = void 0;
+const tslib_1 = require("tslib");
 const os_1 = require("os");
-const win_1 = __importDefault(require("./lib/os/win"));
-const other_1 = __importDefault(require("./lib/os/other"));
+const win_1 = (0, tslib_1.__importDefault)(require("./lib/os/win"));
+const other_1 = (0, tslib_1.__importDefault)(require("./lib/os/other"));
 function locale() {
     let lang;
-    switch (os_1.platform()) {
+    switch ((0, os_1.platform)()) {
         case 'win32':
-            lang = win_1.default();
+            lang = (0, win_1.default)();
             break;
         default:
-            lang = other_1.default();
+            lang = (0, other_1.default)();
             break;
     }
     if (!lang) {
