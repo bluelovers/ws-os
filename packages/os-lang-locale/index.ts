@@ -1,26 +1,35 @@
 import { platform } from 'os';
 import { localeWindows } from './lib/os/win';
 import { localeOther } from './lib/os/other';
+import errCause from 'err-cause';
 
 export function locale(failbackLocale?: string)
 {
 	let lang: string;
+	let err: Error;
 
-	switch (platform())
+	try
 	{
-		case 'win32':
-			lang = localeWindows();
-			break;
-		default:
-			lang = localeOther();
-			break;
+		switch (platform())
+		{
+			case 'win32':
+				lang = localeWindows();
+				break;
+			default:
+				lang = localeOther();
+				break;
+		}
+	}
+	catch (e)
+	{
+		err = e
 	}
 
 	lang ??= failbackLocale;
 
 	if (!lang)
 	{
-		throw new Error(`can't detect locale lang`)
+		throw errCause(new Error(`can't detect locale lang`), err)
 	}
 
 	return lang;
