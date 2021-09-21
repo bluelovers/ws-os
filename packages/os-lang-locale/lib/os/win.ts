@@ -2,15 +2,13 @@
  * Created by user on 2019/5/19.
  */
 
-import crossSpawn from 'cross-spawn-extra';
-import iconv, { ENUM_NODE_ENCODING } from 'iconv-jschardet';
+import { sync as crossSpawn } from 'cross-spawn-extra';
 import { bufString, lineSplitLike, PROJECT_ROOT } from '../util';
-import { crlf, LF } from 'crlf-normalize';
 import { join } from 'path';
 
 export function localeWindows()
 {
-	let cp = crossSpawn.sync(join(PROJECT_ROOT, 'script', 'get_locale.cmd'), {
+	let cp = crossSpawn(join(PROJECT_ROOT, 'script', 'get_locale.cmd'), {
 		stripAnsi: true,
 	});
 

@@ -2,7 +2,7 @@
  * Created by user on 2019/5/19.
  */
 
-import iconv, { ENUM_NODE_ENCODING, BufferFrom } from 'iconv-jschardet';
+import { ENUM_NODE_ENCODING, BufferFrom } from 'iconv-jschardet';
 import { crlf, LF } from 'crlf-normalize';
 import { resolve } from 'path';
 

@@ -4,11 +4,10 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.localeOther = void 0;
-const tslib_1 = require("tslib");
-const cross_spawn_extra_1 = (0, tslib_1.__importDefault)(require("cross-spawn-extra"));
+const cross_spawn_extra_1 = require("cross-spawn-extra");
 const util_1 = require("../util");
 function localeOther() {
-    let cp = cross_spawn_extra_1.default.sync('locale', {
+    let cp = (0, cross_spawn_extra_1.sync)('locale', {
         stripAnsi: true,
     });
     if (!cp.error && cp.stdout) {

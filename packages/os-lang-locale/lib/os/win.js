@@ -4,12 +4,11 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.localeWindows = void 0;
-const tslib_1 = require("tslib");
-const cross_spawn_extra_1 = (0, tslib_1.__importDefault)(require("cross-spawn-extra"));
+const cross_spawn_extra_1 = require("cross-spawn-extra");
 const util_1 = require("../util");
 const path_1 = require("path");
 function localeWindows() {
-    let cp = cross_spawn_extra_1.default.sync((0, path_1.join)(util_1.PROJECT_ROOT, 'script', 'get_locale.cmd'), {
+    let cp = (0, cross_spawn_extra_1.sync)((0, path_1.join)(util_1.PROJECT_ROOT, 'script', 'get_locale.cmd'), {
         stripAnsi: true,
     });
     if (!cp.error && cp.stdout) {

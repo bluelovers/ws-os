@@ -1,8 +1,8 @@
 import { platform } from 'os';
-import localeWindows from './lib/os/win';
-import localeOther from './lib/os/other';
+import { localeWindows } from './lib/os/win';
+import { localeOther } from './lib/os/other';
 
-export function locale()
+export function locale(failbackLocale?: string)
 {
 	let lang: string;
 
@@ -16,6 +16,8 @@ export function locale()
 			break;
 	}
 
+	lang ??= failbackLocale;
+
 	if (!lang)
 	{
 		throw new Error(`can't detect locale lang`)
@@ -24,16 +26,16 @@ export function locale()
 	return lang;
 }
 
-export async function localeAsync()
+export async function localeAsync(failbackLocale?: string)
 {
-	return locale()
+	return locale(failbackLocale)
 }
 
-export function localeCallback<E extends Error = Error>(cb: (err: E, lang) => void)
+export function localeCallback<E extends Error = Error>(cb: (err: E, lang) => void, failbackLocale?: string)
 {
 	try
 	{
-		cb(null, locale())
+		cb(null, locale(failbackLocale))
 	}
 	catch (e)
 	{
@@ -42,4 +44,3 @@ export function localeCallback<E extends Error = Error>(cb: (err: E, lang) => vo
 }
 
 export default locale
-

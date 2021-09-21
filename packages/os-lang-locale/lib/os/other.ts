@@ -2,15 +2,12 @@
  * Created by user on 2019/5/19.
  */
 
-import crossSpawn from 'cross-spawn-extra';
-import path = require('path');
-import iconv, { ENUM_NODE_ENCODING } from 'iconv-jschardet';
+import { sync as crossSpawn } from 'cross-spawn-extra';
 import { bufString, lineSplitLike } from '../util';
-import { crlf, LF } from 'crlf-normalize';
 
 export function localeOther()
 {
-	let cp = crossSpawn.sync('locale', {
+	let cp = crossSpawn('locale', {
 		stripAnsi: true,
 	});
 
