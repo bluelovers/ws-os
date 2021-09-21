@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/bluelovers/ws-os/compare/os-lang-locale@2.0.0...os-lang-locale@2.0.1) (2021-09-21)
+
+
+### ✨　Features
+
+* add failbackLocale ([34352d7](https://github.com/bluelovers/ws-os/commit/34352d7e21a9766b92a93f82c02ba8cb6789212b))
+
+
+### 🔖　Miscellaneous
+
+* . ([b028134](https://github.com/bluelovers/ws-os/commit/b02813425f88491a0d3bc2668d6ca77087abb4be))
+
+
+
+
+
 # [2.0.0](https://github.com/bluelovers/ws-os/compare/os-lang-locale@1.0.1...os-lang-locale@2.0.0) (2021-08-08)
 
 
