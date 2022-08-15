@@ -5,10 +5,14 @@
 import { resolve, dirname } from "path";
 import { homedir } from "os";
 
-export function getHomeDirectory(opts?: {
-	username?: string,
-	homedir?: string,
-})
+export interface IOptionsHomeDirectory
+{
+	username?: string;
+	homedir?: string;
+	homeRootDirectory?: string;
+}
+
+export function getHomeDirectory(opts?: IOptionsHomeDirectory)
 {
 	let _homedir: string;
 	opts ??= {};
@@ -19,7 +23,7 @@ export function getHomeDirectory(opts?: {
 	}
 	else if (isDefined(opts.username))
 	{
-		_homedir = resolve(dirname(homedir()), opts.username)
+		_homedir = resolve(opts.homeRootDirectory || dirname(homedir()), opts.username)
 	}
 	else
 	{

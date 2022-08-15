@@ -13,7 +13,7 @@ function getHomeDirectory(opts) {
         _homedir = opts.homedir;
     }
     else if (isDefined(opts.username)) {
-        _homedir = (0, path_1.resolve)((0, path_1.dirname)((0, os_1.homedir)()), opts.username);
+        _homedir = (0, path_1.resolve)(opts.homeRootDirectory || (0, path_1.dirname)((0, os_1.homedir)()), opts.username);
     }
     else {
         _homedir = (0, os_1.homedir)();
