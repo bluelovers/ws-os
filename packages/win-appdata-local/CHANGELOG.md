@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/bluelovers/ws-os/compare/win-appdata-local@2.0.1...win-appdata-local@2.0.2) (2022-08-15)
+
+
+### 🔖　Miscellaneous
+
+* . ([a9b1a48](https://github.com/bluelovers/ws-os/commit/a9b1a48499425dc18fd6cf918e1c3729e30f4d60))
+
+
+
+
+
 ## [2.0.1](https://github.com/bluelovers/ws-os/compare/win-appdata-local@2.0.0...win-appdata-local@2.0.1) (2022-08-15)
 
 
