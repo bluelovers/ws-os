@@ -25,7 +25,5 @@
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort"
   },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  }
+  "dependencies": {}
 }

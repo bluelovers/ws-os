@@ -1,7 +1,7 @@
 import { platform } from 'os';
 import { localeWindows } from './lib/os/win';
 import { localeOther } from './lib/os/other';
-import errCause from 'err-cause';
+import { errCause } from 'err-cause';
 
 export function locale(failbackLocale?: string)
 {

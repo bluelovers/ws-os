@@ -1,8 +1,8 @@
 /**
  * Created by user on 2020/5/7.
  */
-export declare function get_homedir(opts?: {
+export declare function getHomeDirectory(opts?: {
     username?: string;
     homedir?: string;
 }): string;
-export default get_homedir;
+export default getHomeDirectory;

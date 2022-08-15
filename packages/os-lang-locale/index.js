@@ -1,11 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.localeCallback = exports.localeAsync = exports.locale = void 0;
-const tslib_1 = require("tslib");
 const os_1 = require("os");
 const win_1 = require("./lib/os/win");
 const other_1 = require("./lib/os/other");
-const err_cause_1 = (0, tslib_1.__importDefault)(require("err-cause"));
+const err_cause_1 = require("err-cause");
 function locale(failbackLocale) {
     let lang;
     let err;
@@ -24,7 +23,7 @@ function locale(failbackLocale) {
     }
     lang !== null && lang !== void 0 ? lang : (lang = failbackLocale);
     if (!lang) {
-        throw (0, err_cause_1.default)(new Error(`can't detect locale lang`), err);
+        throw (0, err_cause_1.errCause)(new Error(`can't detect locale lang`), err);
     }
     return lang;
 }

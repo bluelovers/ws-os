@@ -9,7 +9,7 @@ const crlf_normalize_1 = require("crlf-normalize");
 const path_1 = require("path");
 exports.PROJECT_ROOT = (0, path_1.resolve)(__dirname, '..');
 function decodeBuffer(buf) {
-    return (0, iconv_jschardet_1.BufferFrom)(buf, "utf8" /* UTF8 */);
+    return (0, iconv_jschardet_1.BufferFrom)(buf, "utf8" /* ENUM_NODE_ENCODING.UTF8 */);
 }
 exports.decodeBuffer = decodeBuffer;
 function bufString(buf) {
