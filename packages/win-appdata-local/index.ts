@@ -12,7 +12,7 @@ export function winAppdataLocal(): string
 		throw new Error(`current os is not win32`)
 	}
 
-	return process.env.LOCALAPPDATA ?? join(homedir(), 'AppData', 'Local')
+	return process.env['LOCALAPPDATA'] ?? join(homedir(), 'AppData', 'Local')
 }
 
 export default winAppdataLocal
