@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/bluelovers/ws-os/compare/get-homedir@2.0.1...get-homedir@2.0.2) (2022-08-15)
+
+
+### 🔖　Miscellaneous
+
+* . ([71f5c74](https://github.com/bluelovers/ws-os/commit/71f5c7451a7a14db87ae9a342e80151cbbb90bed))
+
+
+
+
+
 ## [2.0.1](https://github.com/bluelovers/ws-os/compare/get-homedir@2.0.0...get-homedir@2.0.1) (2022-08-15)
 
 
