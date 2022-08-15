@@ -1,6 +1,6 @@
 {
   "name": "win-appdata-local",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "get windows LOCALAPPDATA",
   "homepage": "https://github.com/bluelovers/ws-os/tree/master/packages/win-appdata-local#readme",
   "bugs": {
@@ -24,6 +24,5 @@
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort"
-  },
-  "dependencies": {}
+  }
 }
